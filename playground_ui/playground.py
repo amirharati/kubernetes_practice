@@ -19,7 +19,7 @@ def handlePython():
     if request.method == 'POST':
         if 'code' in request.form:
             code = request.form['code']
-        elif 'code' in request.json['code']:
+        elif 'code' in request.json:
             code = request.json['code']
         else:
             return("error")
